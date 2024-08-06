@@ -13,6 +13,8 @@
 @section('body_data', $layoutHelper->makeBodyData())
 
 @section('body')
+    {{-- agregue este mensaje a la plantilla --}}
+    {{-- @include('adminlte.partials.common.message') --}}
     <div class="wrapper">
 
         {{-- Preloader Animation (fullscreen mode) --}}

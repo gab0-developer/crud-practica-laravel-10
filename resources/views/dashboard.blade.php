@@ -19,9 +19,9 @@
     <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
     <script> 
         Swal.fire({
-  title: "Good job!",
-  text: "You clicked the button!",
-  icon: "success"
-});
+            title: "Bienvenido!",
+            text: "Crud de practica de clientes!",
+            icon: "success"
+        });
     </script>
 @stop

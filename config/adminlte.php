@@ -322,12 +322,40 @@ return [
             'label' => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        // ['header' => 'account_settings'],
+        ['header' => 'CLIENTES'],
         [
             'text' => 'inicio',
             'url' => 'dashboard',
             'icon' => 'fas fa-fw fa-user',
         ],
+        [
+            'text' => 'Clientes',
+            'route' => 'cliente.index',
+            // 'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Registrar cliente',
+            'route' => 'cliente.create',
+            // 'icon' => 'fas fa-fw fa-user',
+        ],
+        ['header' => 'ADMINISTRACIÓN DE USUARIOS',
+            'can' => 'administracion avanzada'
+        ],
+            
+        // [
+        //     'text' => 'Roles',
+        //     'route' => 'roles.index',
+        //     // 'icon' => 'fas fa-fw fa-user',
+        //     'can' => 'administracion avanzada'
+        // ],
+        // [
+        //     'text' => 'Permisos',
+        //     'route' => 'permisos.index',
+        //     // 'icon' => 'fas fa-fw fa-user',
+        //     'can' => 'administracion avanzada'
+        // ],
+
         [
             'text' => 'profile',
             // 'route' => 'admin/settings',
@@ -340,15 +368,30 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text' => 'multilevel',
+            'text' => 'Usuarios',
             'icon' => 'fas fa-fw fa-share',
+            'can' => 'administracion avanzada',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
+                    'text' => 'Usuarios',
+                    'route' => 'userspermisos.index',
+                    'icon' => 'fas fa-fw fa-user',
+                    'can' => 'administracion avanzada'
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Roles',
+                    'route' => 'roles.index',
+                    // 'icon' => 'fas fa-fw fa-user',
+                    'can' => 'administracion avanzada'
+                ],
+                [
+                    'text' => 'Permisos',
+                    'route' => 'permisos.index',
+                    // 'icon' => 'fas fa-fw fa-user',
+                    'can' => 'administracion avanzada'
+                ],
+                [
+                    'text' => 'submenu',
                     'url' => '#',
                     'submenu' => [
                         [
@@ -371,10 +414,7 @@ return [
                         ],
                     ],
                 ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
+                
             ],
         ],
         ['header' => 'labels'],
